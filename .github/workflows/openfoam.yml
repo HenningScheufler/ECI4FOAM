@@ -31,7 +31,9 @@ jobs:
         #install generator
         cd OpenFOAMGen/OpenFOAMGen
         conan export . myuser/OpenFOAMGen
+        cd ../..
 
+        # compile OpenFOAM
         openfoam2106 -c ./Allwmake
     # - name: test
     #   run: |
